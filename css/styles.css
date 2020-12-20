@@ -561,15 +561,17 @@ ul {
 
 .footer .mail {
   display: inline-block;
-  min-width: 358px;
+  width: 358px;
+  height: 50px;
   padding-top: 15px;
   padding-right: 16px;
   padding-bottom: 15px;
   padding-left: 16px;
+  margin-right: 12px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-
+  color: rgba(255, 255, 255, 0.6);
   background-color: var(--secondary-background-color);
 }
 
@@ -582,6 +584,9 @@ ul {
 }
 
 .footer .submit {
+  display: flex;
+  align-items: center;
+  min-width: 200px;
   padding-top: 10px;
   padding-right: 28px;
   padding-bottom: 10px;
@@ -590,11 +595,26 @@ ul {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-
   text-align: center;
   letter-spacing: 0.06em;
 
+  cursor: pointer;
+  border: none;
   color: var(--secondary-accent-color);
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer .icon-send {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+
+  fill: var(--secondary-accent-color);
 }
 /* ------END FOOTER------ */
 
@@ -770,6 +790,7 @@ ul {
   left: 50%;
   transform: translate(-50%, -50%);
 
+  padding: 40px;
   width: 528px;
   min-height: 581px;
 
@@ -794,10 +815,156 @@ ul {
   cursor: pointer;
 }
 
-.close {
+.btn .close {
   width: 18px;
   height: 18px;
 
   fill: rgb(0, 0, 0);
 }
-/* ------ END BACKDROP------ */
+
+.request-text {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+
+  color: var(--main-secondary-color);
+}
+
+.input,
+.textarea {
+  display: block;
+  width: 100%;
+
+  outline: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  border-color: rgba(33, 33, 33, 0.2);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--accent-color);
+}
+
+.input:focus + .info-icon {
+  fill: var(--accent-color);
+}
+
+.input {
+  padding-left: 42px;
+  height: 40px;
+}
+
+.textarea {
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+}
+
+.textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.label-info,
+.label-comment,
+.textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.667;
+  letter-spacing: 0.01em;
+}
+
+.label-info {
+  margin-bottom: 10px;
+}
+
+.label-comment {
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+
+  display: block;
+  margin-top: 4px;
+}
+
+.info-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  fill: var(--main-secondary-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.policy-link {
+  margin-left: 4px;
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+.label-policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  margin-bottom: 30px;
+}
+
+.label-policy::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+
+  background-color: var(--secondary-accent-color);
+  background-image: url(../images/vector.svg);
+  border: 2px solid var(--main-secondary-color);
+  border-radius: 2px;
+  border-color: var(--main-secondary-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-policy:checked + .label-policy::before {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.policy-btn {
+  display: block;
+  margin: 0 auto;
+  min-width: 200px;
+
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  border: none;
+  border-radius: 4px;
+  color: var(--secondary-accent-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+/* ------ END BACKDROP------ */ ;
