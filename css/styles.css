@@ -535,7 +535,7 @@ ul {
 }
 
 .left-side {
-  margin-right: 85px;
+  margin-right: 83px;
 }
 
 .footer .social-links {
@@ -557,6 +557,10 @@ ul {
 .footer .social-link:hover,
 .footer .social-link:focus {
   background-color: var(--accent-color);
+}
+
+.subscription-form {
+  display: flex;
 }
 
 .footer .mail {
@@ -595,7 +599,6 @@ ul {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
-  text-align: center;
   letter-spacing: 0.06em;
 
   cursor: pointer;
