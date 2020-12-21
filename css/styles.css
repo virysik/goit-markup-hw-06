@@ -607,6 +607,7 @@ ul {
 
 .footer-form {
   display: flex;
+  flex-direction: column;
 }
 
 .footer .icon-send {
